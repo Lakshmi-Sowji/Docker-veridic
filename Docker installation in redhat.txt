@@ -1,0 +1,38 @@
+redhat: 
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum -y install docker-ce  
+
+
+ If u get error about selinux use  below command:
+sudo yum install -y http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.55-1.el7.noarch.rpm
+ 
+
+If u get the following error,
+Package: docker-ce-17.06.0.ce-1.el7.centos.x86_64 (docker-ce-stable)
+       Requires: container-selinux >= 2.9
+       You could try using --skip-broken to work around the problem
+       You could try running: rpm -Va --nofiles --nodigest
+
+use  below command:
+sudo yum install –y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+After installation , we may get error like "is the docker daemon running". For this,stop the docker service and start. 
+
+
+
+
+In ubuntu: follow below link
+
+https://www.linuxbabe.com/docker/install-docker-ubuntu-16-10-yakkety-yak
+
+we may get error like systemctl not found: easy to resolve.
+
+
+For windows, we have direct docker installer which we can download from 
+https://docs.docker.com/docker-for-windows/install/
+
+
+
+
+
+
